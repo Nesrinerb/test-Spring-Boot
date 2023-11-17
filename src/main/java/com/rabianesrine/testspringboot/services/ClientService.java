@@ -28,6 +28,7 @@ public class ClientService {
 
     public  Client addNewClient(Client client){
         var exist = repository.existsByEmail(client.getEmail());
+        System.out.println("test !!");
         if (exist){
             return repository.save(client);
         }
